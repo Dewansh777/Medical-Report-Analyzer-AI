@@ -9,7 +9,7 @@ import google.generativeai as genai
 st.set_page_config(page_title="Medical Report Analyzer AI", layout="wide")
 
 # --- Load API Key ---
-api_key = st.secrets["GEMINI_API_KEY"]
+api_key = st.secrets["GOOGLE_API_KEY"]
 genai.configure(api_key=api_key)
 # --- Initialize Agents ---
 parser = PDFParserAgent()
