@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+python-dotenv
+PyMuPDF
+Pillow
+tabula-py
+camelot-py[cv]
+pytesseract
+opencv-python-headless
