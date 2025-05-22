@@ -3,13 +3,14 @@ from agents.parser_agent import PDFParserAgent, clear_temp_images
 from agents.analyzer_agent import AnalyzerAgent
 from utils.helpers import load_api_key
 import os
+import google.generativeai as genai
 
 # --- Page Configuration ---
 st.set_page_config(page_title="Medical Report Analyzer AI", layout="wide")
 
 # --- Load API Key ---
-load_api_key()
-
+api_key = st.secrets["GEMINI_API_KEY"]
+genai.configure(api_key=api_key)
 # --- Initialize Agents ---
 parser = PDFParserAgent()
 analyzer = AnalyzerAgent()
